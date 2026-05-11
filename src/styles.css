@@ -136,3 +136,98 @@ code {
     @apply bg-background text-foreground;
   }
 }
+/* ─── Portfolio Animations ─────────────────────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-24px) scale(1.04); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(24px) scale(0.96); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-14px) translateX(10px); }
+  66% { transform: translateY(8px) translateX(-8px); }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Blob decorations */
+.blob-1 { animation: float          8s  ease-in-out infinite; }
+.blob-2 { animation: float-reverse  10s ease-in-out infinite; }
+.blob-3 { animation: float-slow     12s ease-in-out infinite 2s; }
+
+/* Typing cursor */
+.cursor-blink { animation: cursor-blink 1s step-end infinite; }
+
+/* Hero entry animations (staggered via delay classes) */
+.hero-animate-1 { opacity: 0; animation: hero-fade-up 0.7s ease-out 0.1s forwards; }
+.hero-animate-2 { opacity: 0; animation: hero-fade-up 0.7s ease-out 0.25s forwards; }
+.hero-animate-3 { opacity: 0; animation: hero-fade-up 0.7s ease-out 0.4s forwards; }
+.hero-animate-4 { opacity: 0; animation: hero-fade-up 0.7s ease-out 0.55s forwards; }
+.hero-animate-5 { opacity: 0; animation: hero-fade-up 0.7s ease-out 0.7s forwards; }
+
+/* Scroll-reveal: add .reveal-visible via JS IntersectionObserver */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children inside a revealed container */
+.reveal-element.reveal-visible .reveal-child {
+  animation: reveal-up 0.5s ease-out both;
+}
+.reveal-element.reveal-visible .reveal-child:nth-child(1) { animation-delay: 0ms; }
+.reveal-element.reveal-visible .reveal-child:nth-child(2) { animation-delay: 80ms; }
+.reveal-element.reveal-visible .reveal-child:nth-child(3) { animation-delay: 160ms; }
+.reveal-element.reveal-visible .reveal-child:nth-child(4) { animation-delay: 240ms; }
+.reveal-element.reveal-visible .reveal-child:nth-child(5) { animation-delay: 320ms; }
+.reveal-element.reveal-visible .reveal-child:nth-child(6) { animation-delay: 400ms; }
+
+/* Animated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #c7d2fe 40%, #a5b4fc 70%, #e879f9 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-x 6s ease infinite;
+}
+
+/* Grid dot background */
+.bg-grid-dots {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
