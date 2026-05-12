@@ -50,7 +50,7 @@ export function Header() {
             </a>
 
             <a
-              href="https://github.com/abhijit-singh"
+              href="https://github.com/Abhijit4001"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
