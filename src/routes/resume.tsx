@@ -43,7 +43,7 @@ function ResumePage() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/abhijit-singh"
+              href="https://github.com/Abhijit4001"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-gray-900 transition-colors"
