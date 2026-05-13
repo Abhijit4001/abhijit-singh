@@ -2,7 +2,7 @@
 title: "Personal Portfolio Website"
 description: "A modern, animated portfolio site built with TanStack Start (SSR React), TailwindCSS v4, and Content Collections — deployed on Netlify with CI/CD."
 tags: ["React", "TanStack Start", "TypeScript", "TailwindCSS", "Netlify", "Content Collections"]
-github: "https://github.com/abhijit-singh"
+github: "https://github.com/Abhijit4001"
 liveUrl: "https://serene-tanuki-7c7f93.netlify.app/"
 ---
 
